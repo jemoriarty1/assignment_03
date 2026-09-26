@@ -1,6 +1,5 @@
-Write your reflection here.
-
-See reflection.md for what makes a good reflection — be specific, use the
-terminology from this assignment (rerun, widget, return value, guard, bytes vs.
-text, decode, session state, initialise once, button-triggered, metric), and make
-it actionable.
+In this assignment I learned about how a Streamlit script reruns from the top 
+to the bottom on every interaction, so any value that needs to survive between 
+reruns has to be stored in session_state instead of a normal variable, which 
+resets every time. I also learned about how fils arriv as bytes, which means I had to call 
+.decode("utf-8") on it before I could split it into lines.
