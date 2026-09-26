@@ -38,3 +38,27 @@ Test it: pytest tests/test_streamlit.py -k process_files
 # README Step 7 names the two traps. The tests are built around them: choosing a
 # file without clicking must change nothing, and a rerun with the same file still
 # chosen must not count it again.
+
+import streamlit as st
+import json
+from packaging_parser import (
+    parse_packaging,
+    calc_total_units,
+    get_unit,
+)
+
+st.title("Process Files of Packages")
+
+if "files_processed" not in st.session_state:
+    st.session_state.files_processed = 0
+if "packages_processed" not in st.session_state:
+    st.session_state.packages_processed = 0
+if "file_summaries" not in st.session_state:
+    st.session_state.file_summaries = []
+
+
+package_file = st.file_uploader(
+    "Upload package data:", 
+    key='package_file'
+)
+
