@@ -5,4 +5,6 @@ time. I also learned about using .decode("utf-8") to turn the bytes from files
 into text before I could split it into lines. I struggled with the interaction 
 between rerun order and session_state. I kept displaying that state using 
 widgets that were placed before the button's processing block in the script, 
-so what showed on the page was always one rerun behind the actual data.
+so what showed on the page was always one rerun behind the actual data. I will
+make sure whenever I'm coding to double check the order of my code to ensure
+that it properly works.
