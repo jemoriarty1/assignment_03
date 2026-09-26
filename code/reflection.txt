@@ -2,4 +2,8 @@ In this assignment I learned about how a Streamlit script reruns from the top
 to the bottom on every interaction, so any value that needs to survive between 
 reruns has to be stored in session_state instead of a normal variable, which 
 resets every time. I also learned about how files arrive as bytes, which means I 
-had to call .decode("utf-8") on it before I could split it into lines.
+had to call .decode("utf-8") on it before I could split it into lines. I 
+struggled with the interaction between rerun order and session_state. My code 
+would update state correctly, but I kept displaying that state using 
+widgets that were placed before the button's processing block in the script, 
+so what showed on the page was always one rerun behind the actual data.

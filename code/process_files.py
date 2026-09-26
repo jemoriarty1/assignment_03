@@ -52,6 +52,5 @@ col1, col2 = st.columns(2)
 col1.metric("Files processed", st.session_state.files_processed)
 col2.metric("Packages processed", st.session_state.packages_processed)
 
-
 for summary in st.session_state.file_summaries:
     st.info(summary)
