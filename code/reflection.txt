@@ -1,6 +1,6 @@
 In this assignment I learned about how a Streamlit script reruns from the top 
 on every interaction, so any value that needs to survive between reruns has to 
-be stored in session_state instead of a normal variable, which resets every 
+be stored in session state instead of a normal variable, which resets every 
 time. I also learned about using .decode("utf-8") to turn the bytes from files
 into text before I could split it into lines. I struggled with the interaction 
 between rerun order and session_state. I kept displaying that state using 
